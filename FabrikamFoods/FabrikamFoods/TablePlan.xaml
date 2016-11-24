@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FabrikamFoods.TablePlan">
+
+  <ContentPage.Content>
+    <StackLayout x:Name ="layout" Padding="35,15">
+
+      <Label TextColor="#000000" FontSize = "20" Text="Table Locations" />
+      <Image Source="floor.jpg" />
+      <Label TextColor="#000000" FontSize = "14" Text="Choose your favourite seating positions by just making a booking with the table number." />
+      <Label TextColor="#000000" FontSize = "14" Text="Phone: 021 280 0980" />
+
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

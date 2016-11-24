@@ -39,6 +39,14 @@ namespace FabrikamFoods
             };
             map.Pins.Add(pin);
 
+            Button tablePlan = new Button
+            {
+                Text = "Bookings",
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.Center
+            };
+            tablePlan.Clicked += OnButtonClicked1;
+
 
             var label5 = new Label { Text = "Niche and modern resturant. Welcoming atmosphere and good food, come try the Fabrikam taste!", TextColor = Color.FromHex("#000000"), FontSize = 14 };
 
@@ -48,6 +56,13 @@ namespace FabrikamFoods
             layout.Children.Add(label4);
             layout.Children.Add(map);
             layout.Children.Add(label5);
+            layout.Children.Add(tablePlan);
+        }
+
+        async void OnButtonClicked1(object sender, EventArgs args)
+        {
+            Button button = (Button)sender;
+            await Navigation.PushModalAsync(new TablePlan());
         }
 
     }
