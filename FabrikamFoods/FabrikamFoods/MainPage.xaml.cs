@@ -61,6 +61,12 @@ namespace FabrikamFoods
                 return;
             }
 
+            if (string.IsNullOrWhiteSpace(passwordS))
+            {
+                await DisplayAlert("Password cannot be whitespace", "Don't try to trick me :)", "Fine :(");
+                return;
+            }
+
             usertable entry = new usertable()
             {
                 createdAt = DateTime.Now,
@@ -71,6 +77,8 @@ namespace FabrikamFoods
             };
 
             await AzureManager.AzureManagerInstance.AddUser(entry);
+
+            await DisplayAlert("Successfully signed up!", "Great", "Thanks");
         }
 
         async void OnButtonClicked2(object sender, EventArgs args)
