@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FabrikamFoods.MenuPage">
+  
+  <ContentPage.Content>
+    <StackLayout x:Name ="layout" Padding="35,15">
+      
+      <Label TextColor="#000000" FontSize = "20" Text="Today's Menu" />
+      
+      <ListView  x:Name="MenuList">
+        <ListView.Header>
+          <Label Text="Item-------Price----------------------------------------------Rating" />
+        </ListView.Header>
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout BackgroundColor="#ffffff" Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                  <Label Text="{Binding item}" />
+                  <Label Text="{Binding price}" TextColor="#f35e20" />
+                  <Label Text="{Binding rating}" HorizontalOptions="EndAndExpand" TextColor="#503026" />
+                </StackLayout>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      
+      <Button Text="Show menu" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Clicked="ViewTimeline_Clicked"/>
+      
+
+    </StackLayout>
+  </ContentPage.Content>
+
+</ContentPage>

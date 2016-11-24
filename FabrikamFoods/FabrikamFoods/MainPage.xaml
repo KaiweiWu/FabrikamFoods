@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FabrikamFoods"
+             x:Class="FabrikamFoods.MainPage"
+             Title="Fabrikam Food">
+  <ContentPage.Content>
+    <StackLayout Spacing="0" x:Name="layout">
+      <BoxView HeightRequest="75" Color="#1491CC" VerticalOptions="End"
+        HorizontalOptions="FillAndExpand" />
+      <Image Source="logo.jpg" />
+      <Entry Placeholder="Username" Completed="Username_Completed" TextChanged="User_TextChanged"/>
+      <Entry IsPassword="true" Placeholder="Password" Completed="Password_Completed" TextChanged="Pass_TextChanged"/>
+
+
+      <Button Text="Sign up" VerticalOptions="Start"
+        HorizontalOptions="FillAndExpand" Clicked="OnButtonClicked1"/>
+      <Button Text="Sign in" VerticalOptions="Start"
+        HorizontalOptions="FillAndExpand" Clicked="OnButtonClicked2"/>
+      <Button Text="Continue on..." VerticalOptions="Start"
+        HorizontalOptions="FillAndExpand" Clicked="OnButtonClicked3"/>
+      <BoxView HeightRequest="75" Color="#1491CC" VerticalOptions="End"
+        HorizontalOptions="FillAndExpand" />
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
